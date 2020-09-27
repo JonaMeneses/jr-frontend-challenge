@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Rick and Morty App!
 
-In the project directory, you can run:
+Esta aplicación tiene como objetivo poner a prueba las habilidades del desarrollador.
 
-### `npm start`
+## Desafío
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Crear una aplicación web el cual contenga las descripciones de todos los personajes de la serie **Rick and Morty** .
+ **Nota:** Para este desafió deberás usar React o Vuejs, puedes usar también algunas librerías de diseño como son [Ant Design](https://ant.design), [Material-UI](https://material-ui.com), [React bootstrap](https://react-bootstrap.github.io), entre otros.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Instrucciones
 
-### `npm test`
+Deberas consumir la siguiente API REST  [The Rick and Morty API](https://rickandmortyapi.com)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ 1. Primera vista: 
+	- Obtener la lista de todos los personajes, esta vista deberá desplegarse en un [GRID](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout) y debera mostrarse como una lista de tarjetas [Card view](https://material.io/develop/android/components/cards/), el cual deben desplegarse los siguentes datos del personaje mas importantes del personaje, [tomar como referencia la misma pagina para estas tarjetas](https://rickandmortyapi.com).
+	- Deberá tener un buscador de personajes por nombre.
+ 2. Segunda vista: al hacer clic a un personaje de la vista anterior deberá llevar a una nueva vista y desplegar. todos los datos de este.
+ 3. Todas las vistas deben ser responsivas recuerda "Mobile First".
+ 4. Al terminar tu proyecto, envía el Link de tu repositorio a tu reclutador.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```mermaid
+graph LR
+A[List of characters] -- Get characters --> B(API)
+B -- List of characters found --> A
+A -- Show character --> C(Character view)
+C -- Get character --> B
+B -- Character response --> C
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Indicaciones Generales.
+Puedes usar cualquier librería para el diseño de la UI incluso si lo quieres hacer sin usar librerías estaría genial.
+De igual forma eres libre de usar cualquier servicio para hacer las consultas al API.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Mucha suerte**

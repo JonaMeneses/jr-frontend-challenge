@@ -69,15 +69,16 @@ class App extends Component {
         <div className="cabecera">
           <center><h1>Rick and Morty</h1></center>
         </div>
-            <div className="col-6 form-inline">
-            <input type="text" className="form-control" name="nombre" value={this.state.nombre}
+            <div className="col-md-6 col-sm-10 form-inline">
+            <input type="text" className="form-control mb-2" name="nombre" value={this.state.nombre}
               onChange={(e) => this.handleNombreChange(e)} placeholder="Nombre"/>
-            <button className="btn btn-primary" onClick={()=>this.selectFiltro()}>Buscar</button>
+           
+            <button className="btn btn-primary form-control mb-2" onClick={()=>this.selectFiltro()}>Buscar</button>
             </div>
          <br/>
           <div className="container-fluid row" >
           {this.state.personajes.map((personaje) => ( 
-             <div className="col-md-6" > 
+             <div className="col-md-6 col-sm-12" > 
             <div className="card mb-3  RedondeoIzquierdo Redondeo" style={{border: "none"}} key={personaje.id}>
               <div className="row no-gutters">
                 <div className="col-md-4 ">
